@@ -1,0 +1,29 @@
+body {
+  margin: 60px;
+}
+
+h1 {
+ 
+  font-family: "Courier New", Courier, monospace;
+  font-size: 45px;
+  color: crimson;
+  font-weight: normal;
+}
+
+h2 {
+  float: right;
+  margin-right: 350px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 60px;
+  color: rgb(211, 200, 200);
+  font-weight: bold;
+  
+}
+header {
+  width: 100%;
+  height: 180px;
+ }
+
+.mb-3 {
+  width: 880px;
+}
