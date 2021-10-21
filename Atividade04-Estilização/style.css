@@ -3,10 +3,9 @@ body {
 }
 
 h1 {
- 
   font-family: "Courier New", Courier, monospace;
   font-size: 45px;
-  color: crimson;
+  color: rgb(80, 77, 77);
   font-weight: normal;
 }
 
@@ -19,11 +18,14 @@ h2 {
   font-weight: bold;
   
 }
+
+
+
 header {
   width: 100%;
   height: 180px;
  }
 
 .mb-3 {
-  width: 880px;
+  width: 830px;
 }
