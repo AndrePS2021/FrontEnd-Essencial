@@ -22,46 +22,7 @@
     </div>
  </header>
     
-  <script>
-    function loadMovie() {
-        const TITLE = document.querySelector('#validationTooltip01').value;
-        const YEAR = document.querySelector('#validationTooltip02').value;
-        const SINOPSE = document.querySelector('#validationTextarea').value;
-        console.log(TITLE);
-        console.log(YEAR);
-        console.log(SINOPSE);
-        if (isNullEmpty(TITLE, YEAR, SINOPSE)) {
-            return;
-        }
-        const tableRef = document.getElementById('tabelaDeFilmes');
-        const tbodyRef = tableRef.getElementsByTagName('tbody')[0];
-        let newRow = tableRef.insertRow(-1);
-        let newCell = newRow.insertCell(0);
-        newCell.innerHTML = TITLE;
-        newCell = newRow.insertCell(1);
-        newCell.innerHTML = YEAR;
-        newCell = newRow.insertCell(2);
-        newCell.innerHTML = SINOPSE;
-        const [file] = inputFile.files;
-        if (file) {
-            const img = document.createElement("img");
-            img.id = 'novaImg';
-            img.height = '100';
-            img.src = URL.createObjectURL(file);
-            newCell = newRow.insertCell(3);
-            newCell.appendChild(img);
-        }
-    }
-
-    function isNullEmpty(...args) {
-        for (const item of args) {
-            if (item === "") {
-                return true;
-            }
-        }
-        return false;
-    }
-</script>
+ 
     <h1>Cadastrar filmes</h1>
     <form action="" method="get" onsubmit="return false" class="row g-3 needs-validation" novalidate>
         <div class="col-md-4 position-relative">
@@ -91,7 +52,7 @@
             <div class="invalid-feedback">Example invalid form file feedback</div>
           </div>
         <div class="col-12">
-          <button class="btn btn-secondary" onclick="loadMovie()" type="submit">Cadastrar</button>
+          <button class="btn btn-secondary" type="submit">Cadastrar</button>
         </div>
       </form>
       
@@ -103,8 +64,25 @@
             <th scope="col">Titulo</th>
             <th scope="col">Ano de lançamento</th>
             <th scope="col">Sinopse</th>
-            <th scope="col">Imagem</th>
+            <th scope="col">Capa</th>
           </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>O Poderoso Chefão</td>
+            <td>1972</td>
+            <td>Uma família luta para estabelecer sua supremacia nos Estados Unidos depois da Segunda Guerra Mundial. Uma tentativa de assassinato deixa o chefão Vitto Corleone incapacitado e força os filhos Michael e Sonny a assumir os negócios.</td>
+            <td><img height = "100" src="https://br.web.img3.acsta.net/medias/nmedia/18/90/93/20/20120876.jpg" >
+            </td>
+          </tr>
+          <tr>
+            <td>Três Homens em Conflito</td>
+            <td>1966</td>
+            <td>Durante a Guerra Civil Americana, um pistoleiro misterioso e dois estrangeiros decidem juntar suas forças para encontrar um tesouro escondido.Cada um dos homens conhece apenas uma parte da localização da fortuna, o que força essa parceria. O problema é que nenhum deles tem a intenção de dividir a riqueza.</td>
+            <td><img height = "100" src="https://http2.mlstatic.com/D_NQ_NP_800865-MLB42234342999_062020-O.jpg">
+            </td>
+            </tr>
+          </tbody>
  
 </body>
 <script>// Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -127,7 +105,7 @@
         }, false)
       })
   })()
-    
+   
   </script>
   </html>
    
